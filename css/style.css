@@ -230,7 +230,7 @@ section {
   width: 100%;
   overflow: hidden;
   z-index: 1;
-  background-color: #ffffff; }
+  background-color: #f7f7f7; }
 
 /* Panles */
 .panel .table th,
@@ -6108,7 +6108,7 @@ span.rec-by {
   height: auto;
   color: #2c75d2; }
   .hr-title abbr {
-    background-color: #ffffff; }
+    background-color: #f7f7f7; }
   .hr-title abbr {
     padding: 2px 10px;
     border-radius: 2px;
