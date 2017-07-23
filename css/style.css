@@ -9258,9 +9258,10 @@ img.mfp-img {
   display: inline-block;
   list-style: outside none none;
   min-height: 84px;
-  padding: 20px 0 0;
+  padding: 15px 0 0;
   position: relative;
   width: 100%;
+  margin-bottom:-10px;
   background-color: #ffffff; }
   .post-navigation .post-next,
   .post-navigation .post-prev {
