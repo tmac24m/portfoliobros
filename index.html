@@ -150,12 +150,12 @@
                 <div ng-repeat="x in works" class="portfolio-item img-zoom pf-illustrations pf-uielements pf-media">
                     <div class="portfolio-item-wrap">
                         <div class="portfolio-image">
-                            <a href="#"><img src="images/portfolio/{{x.Image}}" alt=""></a>
+                            <a href="#"><img src="images/portfolio/{{x.image}}" alt=""></a>
                         </div>
                         <div class="portfolio-description">
                             <a href="work.html?id={{x.id}}">
-                                <h3>{{x.Name}}</h3>
-                                <span>{{x.Text}}</span>
+                                <h3>{{x.name}}</h3>
+                                <span>{{x.text}}</span>
                             </a>
                         </div>
                     </div>
@@ -215,7 +215,7 @@
                                 <div class="post-thumbnail-list">
                                     <div ng-repeat="x in works | limitTo:3" class="post-thumbnail-entry">
                                         <div class="post-thumbnail-content">
-                                            <a href="#">{{x.Name}}</a> <span class="post-date"><i class="fa fa-clock-o"></i> {{x.Date}}</span> <span class="post-category"><i class="fa fa-tag"></i> {{x.Text}}</span> </div>
+                                            <a href="work.html?id={{x.id}}">{{x.name}}</a> <span class="post-date"><i class="fa fa-clock-o"></i> {{x.date}}</span> <span class="post-category"><i class="fa fa-tag"></i> {{x.text}}</span> </div>
                                     </div>
                                 </div>
                             </div>

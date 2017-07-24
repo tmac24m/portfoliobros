@@ -7,7 +7,7 @@
     <meta name="author" content="INSPIRO" />
     <meta name="description" content="Themeforest Template Polo">
     <!-- Document title -->
-    <title>Web Vision - {{work.Name}}</title>
+    <title>Web Vision - {{work.name}}</title>
     <!-- Stylesheets & Fonts -->
     
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,800,700,600|Montserrat:400,500,600,700|Raleway:100,300,600,700,800" rel="stylesheet" type="text/css" />
@@ -71,12 +71,12 @@
 
                 <div class="page-title">
                     <div data-animation="fadeIn" class="text-light">
-                        <h1>{{work.Name}}</h1></div>
+                        <h1>{{work.name}}</h1></div>
 
                     <div class="portfolio-attributes style1 text-light">
                         <div class="attribute" data-animation="fadeInUp" data-animation-delay="1000"><strong>Client:</strong> Woody Furniture</div>
-                        <div class="attribute" data-animation="fadeInUp" data-animation-delay="1200"><strong>Date:</strong> 2017-07-10</div>
-                        <div class="attribute" data-animation="fadeInUp" data-animation-delay="1400"><strong>Services:</strong> Web Design </div>
+                        <div class="attribute" data-animation="fadeInUp" data-animation-delay="1200"><strong>Date:</strong> {{work.date}} </div>
+                        <div class="attribute" data-animation="fadeInUp" data-animation-delay="1400"><strong>Services:</strong> {{work.text}} </div>
                     </div>
                 </div>
             </div>
@@ -89,7 +89,7 @@
                 <div class="row">
                     <div class="col-md-8 center">
                         <div class="project-description text-center">
-                            <h3>{{work.Text}}</h3>
+                            <h3>{{work.text}}</h3>
                             <p>Guide to the World has the guts to design and develop the impossible. With passion and a lot of expertise we create a surprisingly timeless collection of beautiful functional furniture, made with innovative and sustainable materials. Our brand represents connection.</p>
 
                             <div class="portfolio-share" data-animation="fadeIn">
@@ -176,7 +176,7 @@
                                 <div class="post-thumbnail-list">
                                     <div ng-repeat="x in works | limitTo:3" class="post-thumbnail-entry">
                                         <div class="post-thumbnail-content">
-                                            <a href="#">{{x.Name}}</a> <span class="post-date"><i class="fa fa-clock-o"></i> {{x.Date}}</span> <span class="post-category"><i class="fa fa-tag"></i> {{x.Text}}</span> </div>
+                                            <a href="work.html?id={{x.id}}">{{x.name}}</a> <span class="post-date"><i class="fa fa-clock-o"></i> {{x.date}}</span> <span class="post-category"><i class="fa fa-tag"></i> {{x.text}}</span> </div>
                                     </div>
                                 </div>
                             </div>

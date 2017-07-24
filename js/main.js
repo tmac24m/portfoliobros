@@ -2,39 +2,39 @@ var app = angular.module('app', []);
 var dados = [ 
        {
 			"id"   : 0,
-            "Name" : "PromoFinder",
-            "Text" : "Web Design",
-            "Date" : "12/06/2017",
-            "Image": "60.jpg",
-            "Images" : {}
+            "name" : "PromoFinder",
+            "text" : "Web Design",
+            "date" : "12/06/2017",
+            "image": "60.jpg",
+            "images" : {}
         },{
 			"id"   : 1,
-            "Name" : "One Step to Fall Store",
-            "Text" : "Web Design, Web Development",
-            "Date" : "12/06/2017",
-            "Image": "4.jpg",
-            "Images" : {}
+            "name" : "One Step to Fall Store",
+            "text" : "Web Design, Web Development",
+            "date" : "12/06/2017",
+            "image": "4.jpg",
+            "images" : {}
         },{
 			"id"   : 2,
-            "Name" : "Alfreds Futterkiste",
-            "Text" : "Germany",
-            "Date" : "12/06/2017",
-            "Image": "61.jpg",
-            "Images" : {}
+            "name" : "Alfreds Futterkiste",
+            "text" : "Germany",
+            "date" : "12/06/2017",
+            "image": "61.jpg",
+            "images" : {}
         },{
 			"id"   : 3,
-            "Name" : "PromoFinder",
-            "Text" : "Web Design, Web Development",
-            "Date" : "12/06/2017",
-            "Image": "61.jpg",
-            "Images" : {}
+            "name" : "PromoFinder",
+            "text" : "Web Design, Web Development",
+            "date" : "12/06/2017",
+            "image": "61.jpg",
+            "images" : {}
         },{
 			"id"   : 4,
-            "Name" : "VoluntAge",
-            "Text" : "Web Design, Web Development",
-            "Date" : "12/06/2017",
-            "Image": "60.jpg",
-            "Images" : {}
+            "name" : "VoluntAge",
+            "text" : "Web Design, Web Development",
+            "date" : "12/06/2017",
+            "image": "60.jpg",
+            "images" : {}
         }
     ];
 
@@ -50,20 +50,23 @@ app.controller('work', function($scope) {
 
 	var query = window.location.search.substring(4);
 	var num = parseInt(query);
-	//console.log(query)
 
-	if (num-1 < 0) $scope.prev = {n: $scope.works.length-1, nome: $scope.works[$scope.works.length-1].Name};
-	else $scope.prev = {n: num-1, nome: $scope.works[num-1].Name};
+    if (query && !isNaN(query) && query < $scope.works.length) {
+        arrows();
 
-	if (num+1 > $scope.works.length-1) $scope.next = {n: 0, nome: $scope.works[0].Name};
-	else $scope.next = {n: num+1, nome: $scope.works[num+1].Name};
-
-    if (query) {
-    	$scope.work = $scope.works[query];
-    	console.log($scope.works[query])
-    	if ($scope.work.Images.length > 1) {
-    		$scope.show = 1;
-    	}
+        //console.log($scope.works[query])
+        $scope.work = $scope.works[query];
+        if ($scope.work.images.length > 1) {
+            $scope.show = 1;
+        }
     }else
-    	window.location.href = 'index.html';
+        window.location.href = 'index.html';
+
+    function arrows(){
+        if (num-1 < 0) $scope.prev = {n: $scope.works.length-1, nome: $scope.works[$scope.works.length-1].name};
+        else $scope.prev = {n: num-1, nome: $scope.works[num-1].name};
+
+        if (num+1 > $scope.works.length-1) $scope.next = {n: 0, nome: $scope.works[0].name};
+        else $scope.next = {n: num+1, nome: $scope.works[num+1].name};
+    }
 });
