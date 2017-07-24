@@ -40,16 +40,6 @@ var dados = [
 
 app.controller('port', function($scope) {
     $scope.works = dados;
-	$scope.num = 2;
-
-    console.log($scope.works.length)
-    $scope.len = $scope.works.length;
-
-	$scope.show = function () {
-		if ($scope.num==2) $scope.num = $scope.len;
-		else $scope.num =2;
-	}    
-
 });
 
 app.controller('work', function($scope) {

@@ -139,7 +139,7 @@
         <section id="page-content">
             <div class="container">
                 <div class="hr-title hr-long center"><abbr>Portfólio</abbr>
-                    <h6 class="demo-play">Veja os mais recentes projectos.</h6>
+                    <h6 class="demo-play">Veja os mais recentes projectos</h6>
                 </div>
 
             </div>
@@ -148,18 +148,18 @@
             <div id="portfolio" class="portfolio-3-columns" data-margin="0">
 
 
-                <!-- portfolio item -->
+                <!-- portfolio item SHOW MORE -->
                 <div class="portfolio-item no-overlay pf-illustrations pf-media pf-icons pf-Media pf-graphics">
                     <div class="portfolio-item-wrap">
                         <div class="portfolio-image">
-                            <img src="images/portfolio/60.jpg" alt=""><a class="btn-show" type="button" ng-click="show()">mostrar mais</a>
+                            <img src="images/portfolio/60.jpg" alt=""><a class="btn-show" type="button">mostrar mais</a>
                         </div>
                     </div>
                 </div>
-                <!-- end: portfolio item -->
+                <!-- end: portfolio item SHOW MORE -->
 
                 <!-- portfolio item -->
-                <div ng-repeat="x in works | limitTo: num" class="portfolio-item img-zoom pf-illustrations pf-uielements pf-media">
+                <div ng-repeat="x in works" ng-class="{'work-show': more, 'work-hide': !more}" class="portfolio-item img-zoom pf-illustrations pf-uielements pf-media">
                     <div class="portfolio-item-wrap">
                         <div class="portfolio-image">
                             <a href="#"><img ng-src="images/portfolio/{{x.Image}}" alt=""></a>
