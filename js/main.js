@@ -38,6 +38,16 @@ var dados = [
         }
     ];
 
+app.filter('firstLabel', function ($filter) {
+    return function (input)
+    {
+        //content = content.substring(0, maxCharacters);
+        var dd = input.split(',');
+        if (dd.length>1) return dd[0]+" ...";
+        else return input;
+    };
+});
+
 app.controller('port', function($scope) {
     $scope.works = dados;
 });
