@@ -145,24 +145,12 @@
             </div>
 
             <!-- Portfolio -->
-            <div id="portfolio" class="portfolio-3-columns" data-margin="0">
-
-
-                <!-- portfolio item SHOW MORE -->
-                <div class="portfolio-item no-overlay pf-illustrations pf-media pf-icons pf-Media pf-graphics">
-                    <div class="portfolio-item-wrap">
-                        <div class="portfolio-image">
-                            <img src="images/portfolio/60.jpg" alt=""><a class="btn-show" type="button">mostrar mais</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- end: portfolio item SHOW MORE -->
-
+            <div class="carousel"  data-items="3">
                 <!-- portfolio item -->
-                <div ng-repeat="x in works" ng-class="{'work-show': more, 'work-hide': !more}" class="portfolio-item img-zoom pf-illustrations pf-uielements pf-media">
+                <div ng-repeat="x in works" class="portfolio-item img-zoom pf-illustrations pf-uielements pf-media">
                     <div class="portfolio-item-wrap">
                         <div class="portfolio-image">
-                            <a href="#"><img ng-src="images/portfolio/{{x.Image}}" alt=""></a>
+                            <a href="#"><img src="images/portfolio/{{x.Image}}" alt=""></a>
                         </div>
                         <div class="portfolio-description">
                             <a href="work.html?id={{x.id}}">
@@ -173,7 +161,7 @@
                     </div>
                 </div>
                 <!-- end: portfolio item -->
-                
+
             </div>
             <!-- end: Portfolio -->
         </section>

@@ -13661,3 +13661,7 @@ body.device-xs .col-md-3 .flickr-widget img {
   top: 0;
   z-index: 100;
 }
+
+.owl-dots{
+  display: none !important;
+}
