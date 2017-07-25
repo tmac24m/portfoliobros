@@ -74,9 +74,9 @@
                         <h1>{{work.name}}</h1></div>
 
                     <div class="portfolio-attributes style1 text-light">
-                        <div class="attribute" data-animation="fadeInUp" data-animation-delay="1000"><strong>Client:</strong> Woody Furniture</div>
-                        <div class="attribute" data-animation="fadeInUp" data-animation-delay="1200"><strong>Date:</strong> {{work.date}} </div>
-                        <div class="attribute" data-animation="fadeInUp" data-animation-delay="1400"><strong>Services:</strong> {{work.text}} </div>
+                        <div class="attribute" data-animation="fadeInUp" data-animation-delay="1000"><strong>Cliente:</strong> Woody Furniture</div>
+                        <div class="attribute" data-animation="fadeInUp" data-animation-delay="1200"><strong>Data:</strong> {{work.date}} </div>
+                        <div class="attribute" data-animation="fadeInUp" data-animation-delay="1400"><strong>Serviços:</strong> {{work.text}} </div>
                     </div>
                 </div>
             </div>
@@ -93,7 +93,7 @@
                             <p>Guide to the World has the guts to design and develop the impossible. With passion and a lot of expertise we create a surprisingly timeless collection of beautiful functional furniture, made with innovative and sustainable materials. Our brand represents connection.</p>
 
                             <div class="portfolio-share" data-animation="fadeIn">
-                                <h4>Share this project</h4>
+                                <h4>Partilha este projeto</h4>
                                 <div class="align-center">
                                     <a class="btn btn-slide btn-light" href="#">
                                         <i class="fa fa-facebook"></i>
@@ -116,27 +116,31 @@
                         </div>
                     </div>
                 </div>
-                <div ng-if="show" class="col-md-10 center">
+                <div ng-show="show==1" class="col-md-10 center">
                     <div class="carousel carousel-promotion m-b-40" data-items="1" data-margin="40" data-loop="true" data-autoplay="true">
-                        <div class="portfolio-item">
+                        <div ng-repeat="x in work.images" class="portfolio-item">
                             <div class="portfolio-item-wrap">
                                 <div class="portfolio-image">
-                                    <a href="#"><img src="images/portfolio/project/31.jpg" alt=""></a>
+                                    <a href="#"><img src="images/portfolio/{{x.image}}" alt=""></a>
                                 </div>
                             </div>
                         </div>
 
                     </div>
                 </div>
+                <div ng-show="show==0" class="col-md-10 center">
+                    <img src="images/portfolio/{{work.images[0].image}}" class="img-responsive thumbnail">
+                    <br>
+                </div>
             </div>
 
 
             <div class="post-navigation">
                 <a href="work.html?id={{prev.n}}" class="post-prev">
-                    <div class="post-prev-title"><span>Previous Post</span>{{prev.nome}}</div>
+                    <div class="post-prev-title"><span>Projeto Anterior</span>{{prev.nome}}</div>
                 </a>
                 <a href="work.html?id={{next.n}}" class="post-next">
-                    <div class="post-next-title"><span>Next Post</span>{{next.nome}}</div>
+                    <div class="post-next-title"><span>Projeto Seguinte</span>{{next.nome}}</div>
                 </a>
             </div>
         </section>
@@ -229,7 +233,7 @@
             </div>
             <div class="copyright-content">
                 <div class="container">
-                    <div class="copyright-text text-center">&copy; 2017 WebVision. All Rights Reserved.</div>
+                    <div class="copyright-text text-center">&copy; 2017 WebVision. Todos os direitos reservados.</div>
                 </div>
             </div>
         </footer>
