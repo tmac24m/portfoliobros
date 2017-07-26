@@ -9,11 +9,11 @@ var dados = [
             "images" : [{"image":"project/31.jpg"}]
         },{
 			"id"   : 1,
-            "name" : "One Step to Fall Store",
-            "text" : "Web Design, Web Development",
+            "name" : "One Step to Fall",
+            "text" : "Web Design, Web Development, Design Gráfico",
             "date" : "12/06/2017",
-            "image": "4.jpg",
-            "images" : [{"image": "4.jpg"}, {"image": "4.jpg"}, {"image": "4.jpg"}]
+            "image": "osf-capa-cd-mobile.jpg",
+            "images" : [{"image": "osf-capa-cd-mobile.jpg"}, {"image": "osf-laptop-mobile.jpg"}, {"image": "4.jpg"}]
         },{
 			"id"   : 2,
             "name" : "Alfreds Futterkiste",
