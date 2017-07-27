@@ -43,7 +43,7 @@ app.filter('firstLabel', function ($filter) {
     {
         //content = content.substring(0, maxCharacters);
         var dd = input.split(',');
-        if (dd.length>1) return dd[0]+" ...";
+        if (dd.length>1) return dd[0]+"...";
         else return input;
     };
 });
@@ -53,6 +53,7 @@ app.controller('port', function($scope) {
 });
 
 app.controller('work', function($scope) {
+    $scope.works = dados;
     $scope.show = 0;
 	$scope.prev = {};
 	$scope.next = {};

@@ -3844,8 +3844,9 @@ body.device-xs {
       left: 0;
       height: 100%;
       width: 100%;
+      /* ----- Hover das imagens do slider (work.html) -----
       background-color: #000000;
-      transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;*/
       opacity: 0;
       content: ' ';
       z-index: 2; }
