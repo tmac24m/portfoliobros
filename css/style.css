@@ -3844,9 +3844,8 @@ body.device-xs {
       left: 0;
       height: 100%;
       width: 100%;
-      /* ----- Hover das imagens do slider (work.html) -----
       background-color: #000000;
-      transition: all 0.3s ease-out;*/
+      transition: all 0.3s ease-out;
       opacity: 0;
       content: ' ';
       z-index: 2; }
@@ -13665,4 +13664,8 @@ body.device-xs .col-md-3 .flickr-widget img {
 
 .owl-dots{
   display: none !important;
+}
+
+.this-work .portfolio-item .portfolio-image:after{
+  background-color: transparent;
 }
