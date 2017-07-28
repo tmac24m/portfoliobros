@@ -1,42 +1,42 @@
 var app = angular.module('app', []);
 var dados = [ 
-       {
-			"id"   : 0,
-            "name" : "Bio Artesanal",
-            "text" : "Design Gráfico",
-            "date" : "12/06/2017",
-            "image": "bioartesanal-portfolio.jpg",
-            "images" : [{"image":"bioartesanal-portfolio2.jpg"}]
-        },{
-			"id"   : 1,
-            "name" : "One Step to Fall",
-            "text" : "Web Design, Web Development, Design Gráfico",
-            "date" : "12/06/2017",
-            "image": "osf-all-v2.jpg",
-            "images" : [{"image": "osf-capa-cd-mobile.jpg"}, {"image": "osf-laptop-mobile.jpg"}, {"image": "osf-logo.jpg"}]
-        },{
-			"id"   : 2,
-            "name" : "Alfreds Futterkiste",
-            "text" : "Germany",
-            "date" : "12/06/2017",
-            "image": "61.jpg",
-            "images" : [{"image":"project/31.jpg"}]
-        },{
-			"id"   : 3,
-            "name" : "PromoFinder",
-            "text" : "Web Design, Web Development",
-            "date" : "12/06/2017",
-            "image": "61.jpg",
-            "images" : [{"image":"project/31.jpg"}]
-        },{
-			"id"   : 4,
-            "name" : "VoluntAge",
-            "text" : "Web Design, Web Development",
-            "date" : "12/06/2017",
-            "image": "60.jpg",
-            "images" : [{"image":"project/31.jpg"}]
-        }
-    ];
+   {
+		"id"   : 0,
+        "name" : "Bio Artesanal",
+        "text" : "Design Gráfico",
+        "date" : "12/06/2017",
+        "image": "bioartesanal-portfolio.jpg",
+        "images" : [{"image":"bioartesanal-portfolio2.jpg"}]
+    },{
+		"id"   : 1,
+        "name" : "One Step to Fall",
+        "text" : "Web Design, Web Development, Design Gráfico",
+        "date" : "12/06/2017",
+        "image": "osf-all-v2.jpg",
+        "images" : [{"image": "osf-capa-cd-mobile.jpg"}, {"image": "osf-laptop-mobile.jpg"}, {"image": "osf-logo.jpg"}]
+    },{
+		"id"   : 2,
+        "name" : "Alfreds Futterkiste",
+        "text" : "Germany",
+        "date" : "12/06/2017",
+        "image": "61.jpg",
+        "images" : [{"image":"project/31.jpg"}]
+    },{
+		"id"   : 3,
+        "name" : "PromoFinder",
+        "text" : "Web Design, Web Development",
+        "date" : "12/06/2017",
+        "image": "61.jpg",
+        "images" : [{"image":"project/31.jpg"}]
+    },{
+		"id"   : 4,
+        "name" : "VoluntAge",
+        "text" : "Web Design, Web Development",
+        "date" : "12/06/2017",
+        "image": "60.jpg",
+        "images" : [{"image":"project/31.jpg"}]
+    }
+];
 
 app.filter('firstLabel', function ($filter) {
     return function (input)
