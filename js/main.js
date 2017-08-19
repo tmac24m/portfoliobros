@@ -19,7 +19,7 @@ var dados = [
         "name" : "Caves Cruzeiro Real",
         "text" : "Web Design, Web Development",
         "date" : "12/06/2017",
-        "image": "project/1.jpg.jpg",
+        "image": "project/1.jpg",
         "images" : [{"image":"project/1.jpg"}]
     },{
 		"id"   : 3,
