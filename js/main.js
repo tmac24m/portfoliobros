@@ -20,21 +20,21 @@ var dados = [
         "text" : "Germany",
         "date" : "12/06/2017",
         "image": "61.jpg",
-        "images" : [{"image":"project/31.jpg"}]
+        "images" : [{"image":"project/1.jpg"}]
     },{
 		"id"   : 3,
         "name" : "PromoFinder",
         "text" : "Web Design, Web Development",
         "date" : "12/06/2017",
         "image": "61.jpg",
-        "images" : [{"image":"project/31.jpg"}]
+        "images" : [{"image":"project/1.jpg"}]
     },{
 		"id"   : 4,
         "name" : "VoluntAge",
         "text" : "Web Design, Web Development",
         "date" : "12/06/2017",
         "image": "60.jpg",
-        "images" : [{"image":"project/31.jpg"}]
+        "images" : [{"image":"project/1.jpg"}]
     }
 ];
 
