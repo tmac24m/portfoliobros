@@ -16,24 +16,17 @@ var dados = [
         "images" : [{"image": "osf-capa-cd-mobile.jpg"}, {"image": "osf-laptop-mobile.jpg"}, {"image": "osf-logo.jpg"}]
     },{
 		"id"   : 2,
-        "name" : "Alfreds Futterkiste",
-        "text" : "Germany",
+        "name" : "Caves Cruzeiro Real",
+        "text" : "Web Design, Web Development",
         "date" : "12/06/2017",
-        "image": "61.jpg",
+        "image": "project/1.jpg.jpg",
         "images" : [{"image":"project/1.jpg"}]
     },{
 		"id"   : 3,
-        "name" : "PromoFinder",
-        "text" : "Web Design, Web Development",
-        "date" : "12/06/2017",
-        "image": "61.jpg",
-        "images" : [{"image":"project/1.jpg"}]
-    },{
-		"id"   : 4,
         "name" : "VoluntAge",
         "text" : "Web Design, Web Development",
         "date" : "12/06/2017",
-        "image": "60.jpg",
+        "image": "project/1.jpg",
         "images" : [{"image":"project/1.jpg"}]
     }
 ];
