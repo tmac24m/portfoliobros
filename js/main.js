@@ -24,14 +24,6 @@ var dados = [
         "mobile" : "caves-bg-mobile.jpg",
         "image"  : "caves-all-v2.jpg",
         "images" : [{"image":"caves-laptopmobile.jpg"}]
-    },{
-		"id"     : 3,
-        "name"   : "VoluntAge",
-        "text"   : "Web Design, Web Development",
-        "date"   : "12/06/2017",
-        "mobile" : "project/1.jpg",
-        "image"  : "project/1.jpg",
-        "images" : [{"image":"project/1.jpg"}]
     }
 ];
 
