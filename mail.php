@@ -80,7 +80,7 @@ try {
 	$mail->Send();
 	$arrResult = array ('response'=>'success');
 
-	header('Location: index.html#page-quote?msg=1');
+	header('Location: index.html?msg=1');
 
 } catch (phpmailerException $e) {
 	$arrResult = array ('response'=>'error','errorMessage'=>$e->errorMessage());
