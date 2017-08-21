@@ -22,6 +22,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <!--Controller-->
     <script src="js/main.js"></script> 
+    <style type="text/css">
+        .work-image{
+            background-image:url(images/portfolio/{{work.image}});
+        }
+        
+        @media (max-width: 762px) {
+            .work-image{
+                background-image:url(images/portfolio/{{work.mobile}});
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -66,18 +77,19 @@
         <!-- end: Header -->
         
         <!-- Page title -->
-        <section id="page-title" class="background-image" style="background-image:url(images/portfolio/{{work.image}});">
+        <section id="page-title" class="background-image work-image">
 
             <div class="container">
 
                 <div class="page-title">
                     <div data-animation="fadeIn" class="text-light">
-                        <h1>{{work.name}}</h1></div>
+                        <h1>{{work.name}}</h1>
+                    </div>
 
                     <div class="portfolio-attributes style1 text-light">
-                        <div class="attribute" data-animation="fadeInUp" data-animation-delay="1000"><strong>Cliente:</strong> Woody Furniture</div>
-                        <div class="attribute" data-animation="fadeInUp" data-animation-delay="1200"><strong>Data:</strong> {{work.date}} </div><br>
-                        <div class="attribute" data-animation="fadeInUp" data-animation-delay="1400"><strong>Serviços:</strong> {{work.text}} </div>
+                        <div class="attribute" data-animation="fadeInUp" data-animation-delay="1000"><strong>Cliente:</strong> Woody Furniture</div><br>
+                        <div class="attribute" data-animation="fadeInUp" data-animation-delay="1200"><strong>Serviços:</strong> {{work.text}} </div><br>
+                        <div class="attribute" data-animation="fadeInUp" data-animation-delay="1400"><strong>Data:</strong> {{work.date}} </div>
                     </div>
                 </div>
             </div>
