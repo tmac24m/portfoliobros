@@ -3,7 +3,8 @@ var dados = [
    {
 		"id"    : 0,
         "name"   : "Bio Artesanal",
-        "text"   : "Design Gráfico",
+        "autor"  : "Tiago Carvalho",
+        "title"   : "Design Gráfico",
         "date"   : "12/06/2017",
         "mobile" : "bioartesanal-bg-mobile-min.jpg",
         "image"  : "bioartesanal-portfolio-min.jpg",
@@ -11,7 +12,8 @@ var dados = [
     },{
 		"id"     : 1,
         "name"   : "One Step to Fall",
-        "text"   : "Web Design, Web Development, Design Gráfico",
+        "autor"  : "Tiago e Diogo Carvalho",
+        "title"   : "Web Design, Web Development, Design Gráfico",
         "date"   : "12/06/2017",
         "mobile" : "osf-bg-mobile-min.jpg",
         "image"  : "osf-all-v2-min.jpg",
@@ -19,7 +21,8 @@ var dados = [
     },{
 		"id"     : 2,
         "name"   : "Caves Cruzeiro Real",
-        "text"   : "Web Design, Web Development",
+        "autor"  : "Diogo Carvalho",
+        "title"   : "Web Design, Web Development",
         "date"   : "12/06/2017",
         "mobile" : "caves-bg-mobile-min.jpg",
         "image"  : "caves-all-v2-min.jpg",

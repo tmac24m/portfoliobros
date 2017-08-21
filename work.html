@@ -62,7 +62,7 @@
                         <div class="container">
                             <nav>
                                 <ul>
-                                    <li><a href="index.html#slider">Home</a></li>
+                                    <li><a href="index.html">Home</a></li>
                                     <li><a href="index.html#page-content">Portfólio</a></li>
                                     <li><a href="index.html#page-quote">Contactos</a></li>
                                 </ul>
@@ -87,8 +87,8 @@
                     </div>
 
                     <div class="portfolio-attributes style1 text-light">
-                        <div class="attribute" data-animation="fadeInUp" data-animation-delay="1000"><strong>Cliente:</strong> Woody Furniture</div><br>
-                        <div class="attribute" data-animation="fadeInUp" data-animation-delay="1200"><strong>Serviços:</strong> {{work.text}} </div><br>
+                        <div class="attribute" data-animation="fadeInUp" data-animation-delay="1000"><strong>Autor:</strong> {{work.autor}}</div><br>
+                        <div class="attribute" data-animation="fadeInUp" data-animation-delay="1200"><strong>Serviços:</strong> {{work.title}} </div><br>
                         <div class="attribute" data-animation="fadeInUp" data-animation-delay="1400"><strong>Data:</strong> {{work.date}} </div>
                     </div>
                 </div>
@@ -102,7 +102,7 @@
                 <div class="row">
                     <div class="col-md-8 center">
                         <div class="project-description text-center">
-                            <h3>{{work.text}}</h3>
+                            <h3>{{work.title}}</h3>
                             <p>Guide to the World has the guts to design and develop the impossible. With passion and a lot of expertise we create a surprisingly timeless collection of beautiful functional furniture, made with innovative and sustainable materials. Our brand represents connection.</p>
                         </div>
                     </div>
@@ -193,7 +193,7 @@
                                 <div class="post-thumbnail-list">
                                     <div ng-repeat="x in works | limitTo:3" class="post-thumbnail-entry">
                                         <div class="post-thumbnail-content">
-                                            <a href="work.html?id={{x.id}}">{{x.name}}</a> <span class="post-date"><i class="fa fa-clock-o"></i> {{x.date}}</span> <span class="post-category"><i class="fa fa-tag"></i> {{x.text | firstLabel}}</span> </div>
+                                            <a href="work.html?id={{x.id}}">{{x.name}}</a> <span class="post-date"><i class="fa fa-clock-o"></i> {{x.date}}</span> <span class="post-category"><i class="fa fa-tag"></i> {{x.title | firstLabel}}</span> </div>
                                     </div>
                                 </div>
                             </div>
@@ -226,7 +226,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <textarea class="form-control required" name="comment" rows="4" placeholder="Mensagem" id="comment" aria-required="true"></textarea>
+                                                <textarea class="form-control required" name="comment" rows="3" placeholder="Mensagem" id="comment" aria-required="true"></textarea>
                                             </div>
                                         </div>
                                     </div>

@@ -51,7 +51,7 @@
                         <div class="container">
                             <nav>
                                 <ul>
-                                    <li><a href="#slider">Home</a></li>
+                                    <li><a href="#">Home</a></li>
                                     <li><a href="#page-content">Portfólio</a></li>
                                     <li><a href="#page-quote">Contactos</a></li>
                                 </ul>
@@ -156,7 +156,7 @@
                         <div class="portfolio-description">
                             <a href="work.html?id={{x.id}}">
                                 <h3>{{x.name}}</h3>
-                                <span>{{x.text}}</span>
+                                <span>{{x.title}}</span>
                             </a>
                         </div>
                     </div>
@@ -215,7 +215,7 @@
                                 <div class="post-thumbnail-list">
                                     <div ng-repeat="x in works | limitTo:3" class="post-thumbnail-entry">
                                         <div class="post-thumbnail-content">
-                                            <a href="work.html?id={{x.id}}">{{x.name}}</a> <span class="post-date"><i class="fa fa-clock-o"></i> {{x.date}}</span> <span class="post-category"><i class="fa fa-tag"></i> {{x.text | firstLabel}}</span> </div>
+                                            <a href="work.html?id={{x.id}}">{{x.name}}</a> <span class="post-date"><i class="fa fa-clock-o"></i> {{x.date}}</span> <span class="post-category"><i class="fa fa-tag"></i> {{x.title | firstLabel}}</span> </div>
                                     </div>
                                 </div>
                             </div>
@@ -248,7 +248,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <textarea class="form-control required" name="comment" rows="4" placeholder="Mensagem" id="comment" aria-required="true"></textarea>
+                                                <textarea class="form-control required" name="comment" rows="3" placeholder="Mensagem" id="comment" aria-required="true"></textarea>
                                             </div>
                                         </div>
                                     </div>
