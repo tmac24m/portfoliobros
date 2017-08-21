@@ -63,6 +63,8 @@ try {
 
 	$mail->AddAddress($email);	 						       // Add another recipient
 
+	header('Location: index.html?msg=1');
+
 	//$mail->AddAddress('person2@domain.com', 'Person 2');     // Add a secondary recipient
 	//$mail->AddCC('person3@domain.com', 'Person 3');          // Add a "Cc" address. 
 	//$mail->AddBCC('person4@domain.com', 'Person 4');         // Add a "Bcc" address. 
@@ -79,8 +81,6 @@ try {
 
 	$mail->Send();
 	$arrResult = array ('response'=>'success');
-
-	header('Location: index.html?msg=1');
 
 } catch (phpmailerException $e) {
 	$arrResult = array ('response'=>'error','errorMessage'=>$e->errorMessage());
