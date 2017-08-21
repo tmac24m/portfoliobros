@@ -1,32 +1,36 @@
 var app = angular.module('app', []);
 var dados = [ 
    {
-		"id"   : 0,
-        "name" : "Bio Artesanal",
-        "text" : "Design Gráfico",
-        "date" : "12/06/2017",
-        "image": "bioartesanal-portfolio.jpg",
+		"id"    : 0,
+        "name"   : "Bio Artesanal",
+        "text"   : "Design Gráfico",
+        "date"   : "12/06/2017",
+        "mobile" : "bioartesanal-bg-mobile.jpg",
+        "image"  : "bioartesanal-portfolio.jpg",
         "images" : [{"image":"bioartesanal-portfolio2.jpg"}]
     },{
-		"id"   : 1,
-        "name" : "One Step to Fall",
-        "text" : "Web Design, Web Development, Design Gráfico",
-        "date" : "12/06/2017",
-        "image": "osf-all-v2.jpg",
-        "images" : [{"image": "osf-capa-cd-mobile.jpg"}, {"image": "osf-laptop-mobile.jpg"}, {"image": "osf-logo.jpg"}]
+		"id"     : 1,
+        "name"   : "One Step to Fall",
+        "text"   : "Web Design, Web Development, Design Gráfico",
+        "date"   : "12/06/2017",
+        "mobile" : "osf-bg-mobile.jpg",
+        "image"  : "osf-all-v2.jpg",
+        "images" : [{"image": "osf-capa-cd-mobile.jpg"}, {"image": "osf-laptopmobile.jpg"}, {"image": "osf-logo.jpg"}]
     },{
-		"id"   : 2,
-        "name" : "Caves Cruzeiro Real",
-        "text" : "Web Design, Web Development",
-        "date" : "12/06/2017",
-        "image": "project/1.jpg",
-        "images" : [{"image":"project/1.jpg"}]
+		"id"     : 2,
+        "name"   : "Caves Cruzeiro Real",
+        "text"   : "Web Design, Web Development",
+        "date"   : "12/06/2017",
+        "mobile" : "caves-bg-mobile.jpg",
+        "image"  : "caves-all-v2.jpg",
+        "images" : [{"image":"caves-laptopmobile.jpg"}]
     },{
-		"id"   : 3,
-        "name" : "VoluntAge",
-        "text" : "Web Design, Web Development",
-        "date" : "12/06/2017",
-        "image": "project/1.jpg",
+		"id"     : 3,
+        "name"   : "VoluntAge",
+        "text"   : "Web Design, Web Development",
+        "date"   : "12/06/2017",
+        "mobile" : "project/1.jpg",
+        "image"  : "project/1.jpg",
         "images" : [{"image":"project/1.jpg"}]
     }
 ];
