@@ -42,6 +42,13 @@ app.filter('firstLabel', function ($filter) {
 
 app.controller('port', function($scope) {
     $scope.works = dados;
+
+    var query = window.location.search.substring(5);
+    var num = parseInt(query);
+
+    if (query && !isNaN(query) && query < dados.length) {
+        $("#modal-2").modal("toggle")
+    }
 });
 
 app.controller('work', function($scope) {

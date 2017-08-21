@@ -182,6 +182,21 @@
         </section>
         <!-- end: SECTION QUOTE -->
 
+        <div class="modal fade" id="modal-2" tabindex="-1" role="modal" aria-labelledby="modal-label-2" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                <span>Mensagem enviada com sucesso!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Footer -->
         <footer id="footer" class="footer-light">
             <div class="footer-content">
@@ -227,7 +242,7 @@
                             <div class="widget">
                                 <h4>Contacte-nos</h4>
                         
-                                <form>
+                                <form method="POST" action="mail.php">
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-group">
@@ -241,7 +256,7 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <input type="text" class="form-control required" name="phone" placeholder="Telefone" id="phone" aria-required="true">
+                                                <input type="text" class="form-control required" name="subject" placeholder="Assunto" id="subject" aria-required="true">
                                             </div>
                                         </div>
                                     </div>

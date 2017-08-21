@@ -13669,3 +13669,9 @@ body.device-xs .col-md-3 .flickr-widget img {
 .this-work .portfolio-item .portfolio-image:after{
   background-color: transparent;
 }
+
+.modal-content{
+  background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d;
+  }
