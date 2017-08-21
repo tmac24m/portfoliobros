@@ -5,25 +5,25 @@ var dados = [
         "name"   : "Bio Artesanal",
         "text"   : "Design Gráfico",
         "date"   : "12/06/2017",
-        "mobile" : "bioartesanal-bg-mobile.jpg",
-        "image"  : "bioartesanal-portfolio.jpg",
-        "images" : [{"image":"bioartesanal-portfolio2.jpg"}]
+        "mobile" : "bioartesanal-bg-mobile-min.jpg",
+        "image"  : "bioartesanal-portfolio-min.jpg",
+        "images" : [{"image":"bioartesanal-portfolio2-min.jpg"}]
     },{
 		"id"     : 1,
         "name"   : "One Step to Fall",
         "text"   : "Web Design, Web Development, Design Gráfico",
         "date"   : "12/06/2017",
-        "mobile" : "osf-bg-mobile.jpg",
-        "image"  : "osf-all-v2.jpg",
-        "images" : [{"image": "osf-capa-cd-mobile.jpg"}, {"image": "osf-laptopmobile.jpg"}, {"image": "osf-logo.jpg"}]
+        "mobile" : "osf-bg-mobile-min.jpg",
+        "image"  : "osf-all-v2-min.jpg",
+        "images" : [{"image": "osf-capa-cd-mobile-min.jpg"}, {"image": "osf-laptopmobile-min.jpg"}, {"image": "osf-logo-min.jpg"}]
     },{
 		"id"     : 2,
         "name"   : "Caves Cruzeiro Real",
         "text"   : "Web Design, Web Development",
         "date"   : "12/06/2017",
-        "mobile" : "caves-bg-mobile.jpg",
-        "image"  : "caves-all-v2.jpg",
-        "images" : [{"image":"caves-laptopmobile.jpg"}]
+        "mobile" : "caves-bg-mobile-min.jpg",
+        "image"  : "caves-all-v2-min.jpg",
+        "images" : [{"image":"caves-laptopmobile-min.jpg"}]
     }
 ];
 
