@@ -47,8 +47,12 @@ app.controller('port', function($scope) {
     var num = parseInt(query);
 
     if (query && !isNaN(query) && query < dados.length) {
-        $("#modal-2").modal("toggle")
+        $("#alert-msg").show();
     }
+    $(window).click(function() {
+        $("#alert-msg").hide();
+    });
+
 });
 
 app.controller('work', function($scope) {
