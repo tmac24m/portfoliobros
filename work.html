@@ -103,7 +103,7 @@
                     <div class="col-md-8 center">
                         <div class="project-description text-center">
                             <h3>{{work.title}}</h3>
-                            <p>Guide to the World has the guts to design and develop the impossible. With passion and a lot of expertise we create a surprisingly timeless collection of beautiful functional furniture, made with innovative and sustainable materials. Our brand represents connection.</p>
+                            <p><span  ng-repeat="y in work.text">{{y.texts}}<br></span></p>
                         </div>
                     </div>
                 </div>
@@ -123,7 +123,7 @@
                     <img src="images/portfolio/{{work.images[0].image}}" class="img-responsive thumbnail">
                     <br>
                 </div>
-                <div class="portfolio-share text-center" data-animation="fadeIn">
+            <!--<div class="portfolio-share text-center" data-animation="fadeIn">
                     <h4>Partilha este projeto</h4>
                     <div class="align-center">
                         <a class="btn btn-slide btn-light" href="#">
@@ -144,7 +144,7 @@
                         </a>
                     </div>
                     <br><br>
-                </div>
+                </div>-->
             </div>
 
 
@@ -178,7 +178,7 @@
                                         <a target="_blank" href="https://www.linkedin.com/in/tiago-carvalho-b4aa82142/"><i class="fa fa-linkedin"></i></a>
                                         <a target="_blank" href="https://www.pinterest.pt/thisiswhatiknow/"><i class="fa fa-pinterest"></i></a>
                                     </li>
-                                    <li><i class="fa fa-envelope"></i> <a href="mailto:geral@tdweb.pt">geral@tdweb.pt</a> </li>
+                                    <li><i class="fa fa-envelope"></i><a href="mailto:geral@tdweb.pt">geral@tdweb.pt</a></li>
                                 </ul>
                             </div>
                             <!-- end: Footer widget area 1 -->
