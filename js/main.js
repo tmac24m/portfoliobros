@@ -6,7 +6,7 @@ var dados = [
         "autor"  : "Tiago Carvalho",
         "title"  : "Design Gráfico",
         "date"   : "12/06/2017",
-        "text"   : [{"texts":"Desenvolvimento de flyer em Photoshop para a divulgação de produtos."}],
+        "texts"   : [{"text":"Desenvolvimento de flyer em Photoshop para a divulgação de produtos."}],
         "mobile" : "bioartesanal-bg-mobile-min.jpg",
         "image"  : "bioartesanal-portfolio-min.jpg",
         "images" : [{"image":"bioartesanal-portfolio2-min.jpg"}]
@@ -15,8 +15,8 @@ var dados = [
         "name"   : "One Step to Fall",
         "autor"  : "Tiago e Diogo Carvalho",
         "title"  : "Web Design, Web Development, Design Gráfico",
-        "text"   : [{"texts":"Criação de logótipo, capa de álbum e CD em Photoshop e Illustrator (Tiago Carvalho)."}, 
-                    {"texts":"Criação de website responsivo que visa facilitar o acesso ao album da banda nas várias plataformas de música disponíveis (Diogo Carvalho)."}],
+        "texts"   : [{"text":"Criação de logótipo, capa de álbum e CD em Photoshop e Illustrator (Tiago Carvalho)."}, 
+                    {"text":"Criação de website responsivo que visa facilitar o acesso ao album da banda nas várias plataformas de música disponíveis (Diogo Carvalho)."}],
         "date"   : "12/06/2017",
         "mobile" : "osf-bg-mobile-min.jpg",
         "image"  : "osf-all-v2-min.jpg",
@@ -27,7 +27,7 @@ var dados = [
         "autor"  : "Diogo Carvalho",
         "title"  : "Web Design, Web Development",
         "date"   : "12/06/2017",
-        "text"   : [{"texts":"Criação de website responsivo com backoffice que divulga a história da empresa e os seus variados produtos."}],
+        "texts"   : [{"text":"Criação de website responsivo com backoffice que divulga a história da empresa e os seus variados produtos."}],
         "mobile" : "caves-bg-mobile-min.jpg",
         "image"  : "caves-all-v2-min.jpg",
         "images" : [{"image":"caves-laptopmobile-min.jpg"}]
