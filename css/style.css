@@ -13679,9 +13679,10 @@ body.device-xs .col-md-3 .flickr-widget img {
   display: none;
 }
 
+.social-links {padding-left: 3px;}
 .social-links a i{
   font-size: 16px;
-  margin: 0 5px;
+  margin: 0 0 0 5px;
   padding: 4px 5px;
   border-radius: 3px;
   border: 1px solid #e5e5e5;
