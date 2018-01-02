@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="TDweb" />
-    <meta name="description" content="Portfólio de Tiago e Diogo Carvalho">
+    <meta name="description" content="Portfólio de Tiago e Diogo Carvalho - Web Development, Web Design, Design Gráfico">
     <!-- Document title -->
     <title>TDweb - {{ work.name }}</title>
     <!-- Stylesheets & Fonts -->
     
     <link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,800,700,600|Montserrat:400,500,600,700|Raleway:100,300,600,700,800" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800,700,600|Montserrat:400,500,600,700|Raleway:100,300,600,700,800" rel="stylesheet" type="text/css" />
     <link href="css/plugins.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet"> 
@@ -83,7 +83,7 @@
 
                 <div class="page-title">
                     <div data-animation="fadeIn" class="text-light">
-                        <h1>{{work.name}}</h1>
+                        <h1 class="title-top">{{work.name}}</h1>
                     </div>
 
                     <div class="portfolio-attributes style1 text-light">
@@ -104,6 +104,15 @@
                         <div class="project-description text-center">
                             <h3>{{work.title}}</h3>
                             <p><span  ng-repeat="t in work.texts">{{t.text}}<br></span></p>
+                            <div class="portfolio-share text-center" data-animation="fadeIn">
+                                <div class="align-center">
+                                    <a ng-repeat="y in work.social" class="btn btn-slide btn-light" href="{{y.link}}">
+                                        <i class="fa fa-{{y.icon}}"></i>
+                                        <span>{{y.name}}</span>
+                                    </a>
+                                </div>
+                                <br><br>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -123,28 +132,6 @@
                     <img src="images/portfolio/{{work.images[0].image}}" class="img-responsive thumbnail">
                     <br>
                 </div>
-            <!--<div class="portfolio-share text-center" data-animation="fadeIn">
-                    <h4>Partilha este projeto</h4>
-                    <div class="align-center">
-                        <a class="btn btn-slide btn-light" href="#">
-                            <i class="fa fa-facebook"></i>
-                            <span>Facebook</span>
-                        </a>
-                        <a class="btn btn-slide btn-light" href="#" data-width="120">
-                            <i class="fa fa-twitter"></i>
-                            <span>Twitter</span>
-                        </a>
-                        <a class="btn btn-slide btn-light" href="#" data-width="140">
-                            <i class="fa fa-instagram"></i>
-                            <span>Instagram</span>
-                        </a>
-                        <a class="btn btn-slide btn-light" href="mailto:#" data-width="96">
-                            <i class="fa fa-envelope"></i>
-                            <span>Mail</span>
-                        </a>
-                    </div>
-                    <br><br>
-                </div>-->
             </div>
 
 
