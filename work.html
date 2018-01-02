@@ -177,7 +177,12 @@
                                 <div class="post-thumbnail-list">
                                     <div ng-repeat="x in works | limitTo:3" class="post-thumbnail-entry">
                                         <div class="post-thumbnail-content">
-                                            <a href="work.html?id={{x.id}}">{{x.name}}</a> <span class="post-date"><i class="fa fa-clock-o"></i> {{x.date}}</span> <span class="post-category"><i class="fa fa-tag"></i> {{x.title | firstLabel}}</span> </div>
+                                            <a href="work.html?id={{x.id}}">
+                                                <p> {{x.name}}</p>
+                                                <span class="post-date"><i class="fa fa-clock-o"></i> {{x.date}}</span>
+                                                <span class="post-category"><i class="fa fa-tag"></i> {{x.title | firstLabel}}</span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

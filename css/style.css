@@ -5008,7 +5008,6 @@ span.rec-by {
 .post-thumbnail-entry {
   border-bottom: 1px solid #F2F2F4;
   float: left;
-  margin-bottom: 16px;
   padding-bottom: 10px;
   position: relative;
   clear: both; }
@@ -13282,6 +13281,8 @@ footer.background-grey .copyright-content {
   #footer.footer-light span {
     color: #2c75d2 !important;
     opacity: 0.7; }
+  #footer.footer-light p {
+    margin: 0; }
   #footer.footer-light .copyright-content {
     background-color: #efefef;
     border-top: 1px solid #e5e5e5; }
