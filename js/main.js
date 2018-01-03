@@ -52,10 +52,10 @@ app.controller('port', function ($scope) {
     var query = window.location.search.substring(5);
     var num = parseInt(query);
 
-    if (query && !isNaN(query) && query < dados.length) {
+    if (query && !isNaN(query) && query < dados.length)
         $("#alert-msg").show();
-    }
-    $(window).click(function () {
+
+    $(window).click(function() {
         $("#alert-msg").hide();
     });
 
@@ -75,9 +75,8 @@ app.controller('work', function ($scope) {
 
         //console.log(dados[query])
         $scope.work = dados[query];
-        if ($scope.work.images.length > 1) {
+        if ($scope.work.images.length > 1)
             $scope.show = 1;
-        }
     } else
         window.location.href = 'index.html';
 
