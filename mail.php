@@ -13,7 +13,7 @@ header('Content-type: application/json');
 require_once('PHPMailerAutoload.php');
 
 // Step 1 - Enter your email address below.
-$email = 'geral@tdweb.pt';
+$email = 'suporte@tdweb.pt';
 
 // If the e-mail is not working, change the debug option to 2 | $debug = 2;
 $debug = 2;
@@ -56,7 +56,7 @@ try {
 	$mail->IsSMTP();                                         // Set mailer to use SMTP
 	$mail->Host = 'mail.tdweb.pt';				       // Specify main and backup server
 	$mail->SMTPAuth = true;                                  // Enable SMTP authentication
-	$mail->Username = 'geral@tdweb.pt';                    // SMTP username
+	$mail->Username = 'suporte@tdweb.pt';                    // SMTP username
 	$mail->Password = 'Messias95!';                              // SMTP password
 	$mail->SMTPSecure = 'ssl';                               // Enable encryption, 'ssl' also accepted
 	$mail->Port = 465;   								       // TCP port to connect to
