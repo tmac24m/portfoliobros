@@ -13,7 +13,7 @@ header('Content-type: application/json');
 require_once('PHPMailerAutoload.php');
 
 // Step 1 - Enter your email address below.
-$email = 'suporte@tdweb.pt';
+$email = '_mainaccount@tdweb.pt';
 
 // If the e-mail is not working, change the debug option to 2 | $debug = 2;
 $debug = 2;
@@ -53,12 +53,12 @@ try {
 
 	// Step 2 (Optional) - If you don't receive the email, try to configure the parameters below:
 
-	$mail->IsSMTP();                                         // Set mailer to use SMTP
-	$mail->Host = 'mail.tdweb.pt';				       // Specify main and backup server
-	$mail->SMTPAuth = true;                                  // Enable SMTP authentication
-	$mail->Username = 'suporte@tdweb.pt';                    // SMTP username
-	$mail->Password = 'Messias95!';                              // SMTP password
-	$mail->SMTPSecure = 'ssl';                               // Enable encryption, 'ssl' also accepted
+	$mail->IsSMTP();                                           // Set mailer to use SMTP
+	$mail->Host = 'mail.tdweb.pt';				               // Specify main and backup server
+	$mail->SMTPAuth = true;                                    // Enable SMTP authentication
+	$mail->Username = '_mainaccount@tdweb.pt';                 // SMTP username
+	$mail->Password = '7e6g5Ec8jA';                            // SMTP password
+	$mail->SMTPSecure = 'ssl';                                 // Enable encryption, 'ssl' also accepted
 	$mail->Port = 465;   								       // TCP port to connect to
 
 	$mail->AddAddress($email);	 						       // Add another recipient
@@ -72,7 +72,7 @@ try {
 	$mail->SetFrom($email, 'TDweb');
 	//$mail->AddReplyTo($_POST['senderEmail'], $_POST['senderName']);
 
-	$mail->IsHTML(true);                                  // Set email format to HTML
+	$mail->IsHTML(true);                                       // Set email format to HTML
 
 	$mail->CharSet = 'UTF-8';
 
