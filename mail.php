@@ -1,93 +1,56 @@
 <?php
-/*
-Name: 			Contact Form
-Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	5.7.1
+require 'PHPMailerAutoload.php';
+
+$mail = new PHPMailer;
+
+$mail->isSMTP();                                      // Set mailer to use SMTP
+$mail->Host = 'mail.tdweb.pt';  // Specify main and backup SMTP servers
+$mail->SMTPAuth = true;                               // Enable SMTP authentication
+$mail->Username = 'contactos@tdweb.pt';                 // SMTP username
+$mail->Password = '3{kR$#~EPzrE';                           // SMTP password
+$mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl' also accepted
+
+$mail->From = $_POST['senderEmail'];
+$mail->FromName = $_POST['senderName'];
+$mail->addAddress('contactos@tdweb.pt', 'Contactos');     // Add a recipient
+/*$mail->addAddress('ellen@example.com');               // Name is optional
+$mail->addReplyTo('info@example.com', 'Information');
+$mail->addCC('cc@example.com');
+$mail->addBCC('bcc@example.com');
 */
+$mail->WordWrap = 50;                                 // Set word wrap to 50 characters
+/*$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+$mail->isHTML(true);                                  // Set email format to HTML
+*/
+$mail->Subject = "Contact Form - TDweb";
+$mail->Body    = $_POST['comment'];
+//$mail->AltBody = $_POST['comment'];
 
-session_cache_limiter('nocache');
-header('Expires: ' . gmdate('r', 0));
-
-header('Content-type: application/json');
-
-require_once('PHPMailerAutoload.php');
-
-// Step 1 - Enter your email address below.
-$email = '_mainaccount@tdweb.pt';
-
-// If the e-mail is not working, change the debug option to 2 | $debug = 2;
-$debug = 2;
-
-$subject = "TDweb: ".$_POST['subject'];
-
-$fields = array(
-	0 => array(
-		'text' => 'Nome',
-		'val' => $_POST['senderName']
-	),
-	1 => array(
-		'text' => 'Email',
-		'val' => $_POST['senderEmail']
-	),
-	2 => array(
-		'text' => 'Endereço IP',
-		'val' => $_SERVER['REMOTE_ADDR']
-	),
-	3 => array(
-		'text' => 'Mensagem',
-		'val' => $_POST['comment']
-	)
-);
-
-$message = '';
-
-foreach($fields as $field) {
-	$message .= $field['text'].": " . htmlspecialchars($field['val'], ENT_QUOTES) . "<br>\n";
+if(isset($_POST['g-recaptcha-response'])){
+  	$captcha=$_POST['g-recaptcha-response'];
 }
 
-$mail = new PHPMailer(true);
-
-try {
-
-	$mail->SMTPDebug = $debug;                                 // Debug Mode
-
-	// Step 2 (Optional) - If you don't receive the email, try to configure the parameters below:
-
-	$mail->IsSMTP();                                           // Set mailer to use SMTP
-	$mail->Host = 'mail.tdweb.pt';				               // Specify main and backup server
-	$mail->SMTPAuth = true;                                    // Enable SMTP authentication
-	$mail->Username = '_mainaccount@tdweb.pt';                 // SMTP username
-	$mail->Password = '7e6g5Ec8jA';                            // SMTP password
-	$mail->SMTPSecure = 'ssl';                                 // Enable encryption, 'ssl' also accepted
-	$mail->Port = 465;   								       // TCP port to connect to
-
-	$mail->AddAddress($email);	 						       // Add another recipient
-
-	header('Location: index.html?msg=1');
-
-	//$mail->AddAddress('person2@domain.com', 'Person 2');     // Add a secondary recipient
-	//$mail->AddCC('person3@domain.com', 'Person 3');          // Add a "Cc" address. 
-	//$mail->AddBCC('person4@domain.com', 'Person 4');         // Add a "Bcc" address. 
-
-	$mail->SetFrom($email, 'TDweb');
-	//$mail->AddReplyTo($_POST['senderEmail'], $_POST['senderName']);
-
-	$mail->IsHTML(true);                                       // Set email format to HTML
-
-	$mail->CharSet = 'UTF-8';
-
-	$mail->Subject = $subject;
-	$mail->Body    = $message;
-
-	$mail->Send();
-	$arrResult = array ('response'=>'success');
-
-} catch (phpmailerException $e) {
-	$arrResult = array ('response'=>'error','errorMessage'=>$e->errorMessage());
-} catch (Exception $e) {
-	$arrResult = array ('response'=>'error','errorMessage'=>$e->getMessage());
+if(!$captcha){
+  	header('Location: index.html?e=bot');
+  	//echo '<h2>Please check the the captcha form.</h2>';
+  	//exit;
 }
 
-if ($debug == 0) {
-	echo json_encode($arrResult);
+$secretKey = "6Le9c1YUAAAAAF9AyQeHK7PbGFuDXdjdGd6wiP2q";
+$ip = $_SERVER['REMOTE_ADDR'];
+$response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$ip);
+$responseKeys = json_decode($response,true);
+
+if(intval($responseKeys["success"]) !== 1) {
+  	header('Location: index.html?e=bot');
+  	//die();
+} else {
+	if(!$mail->send()) {
+	    header('Location: index.html?e=error');
+	    	//.trim($mail->ErrorInfo," ")
+	    //die();
+	} else {
+	    header('Location: index.html?e=success');
+	}
 }

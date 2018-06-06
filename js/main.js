@@ -49,10 +49,9 @@ app.filter('firstLabel', function ($filter) {
 app.controller('port', function ($scope) {
     $scope.works = dados;
 
-    var query = window.location.search.substring(5);
-    var num = parseInt(query);
-
-    if (query && !isNaN(query) && query < dados.length)
+    var query = window.location.search.substring(3);
+    
+    if (query && query == 'success')
         $("#alert-msg").show();
 
     $(window).click(function() {
